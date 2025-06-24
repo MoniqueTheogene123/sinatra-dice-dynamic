@@ -52,3 +52,39 @@ get("/dice/5/4") do
 
   erb(:five_four)
 end
+
+get("/dice/6/19") do
+  @rolls = []
+
+  6.times do
+    die = rand(1..19)
+
+    @rolls.push(die)
+  end
+
+  erb(:six_nineteen)
+end
+
+get("/dice/20/4") do
+  @rolls = []
+
+  20.times do
+    die = rand(1..4)
+
+    @rolls.push(die)
+  end
+
+  erb(:twenty_four)
+end
+
+get("/dice/42/1337") do
+  @rolls = []
+
+  42.times do
+    die = rand(1..1337)
+
+    @rolls.push(die)
+  end
+
+  erb(:fortytwo_onethreethreeseven)
+end
